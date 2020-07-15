@@ -5,10 +5,6 @@ app = Flask(__name__, static_url_path="")
 app.register_blueprint(bp)
 
 
-# @app.route("/")
-# def hello_world():
-#     print("Hello")
-#     return "Hello, World!"
 @app.route("/")
 def root():
     return app.send_static_file("index.html")
